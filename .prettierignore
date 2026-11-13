@@ -1,0 +1,11 @@
+node_modules/
+.pnpm-store/
+pnpm-lock.yaml
+.next/
+out/
+dist/
+build/
+coverage/
+.expo/
+backend/
+packages/contracts/src/generated/

@@ -1,0 +1,26 @@
+{
+  "name": "roomsync",
+  "version": "0.0.0",
+  "private": true,
+  "description": "RoomSync - Find your space. Find your people.",
+  "packageManager": "pnpm@10.34.9",
+  "engines": {
+    "node": ">=20.11.0",
+    "pnpm": ">=10.0.0"
+  },
+  "scripts": {
+    "dev": "pnpm --filter @roomsync/web dev",
+    "dev:web": "pnpm --filter @roomsync/web dev",
+    "dev:mobile": "pnpm --filter @roomsync/mobile start",
+    "build": "pnpm --filter @roomsync/web build",
+    "lint": "pnpm -r --if-present lint",
+    "typecheck": "pnpm -r --if-present typecheck",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "pnpm -r --if-present test"
+  },
+  "devDependencies": {
+    "prettier": "^3.3.3",
+    "typescript": "^5.6.3"
+  }
+}

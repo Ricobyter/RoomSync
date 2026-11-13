@@ -1,0 +1,20 @@
+{
+  "name": "@roomsync/api-client",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Shared typed API client for RoomSync web and mobile.",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@roomsync/contracts": "workspace:*",
+    "openapi-fetch": "^0.14.0"
+  }
+}

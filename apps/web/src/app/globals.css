@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+/*
+ * Palette, radii and shadows are injected as CSS variables on :root from
+ * @roomsync/design-tokens (see src/lib/theme.ts). Tailwind utilities below
+ * only alias those variables; no colour values live in this file.
+ */
+@theme inline {
+  --font-sans: var(--font-plus-jakarta), system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  --color-primary: var(--color-brand-primary);
+  --color-primary-foreground: var(--color-text-on-primary);
+  --color-secondary: var(--color-brand-secondary);
+  --color-secondary-foreground: var(--color-text-on-primary);
+  --color-page: var(--color-background);
+  --color-card: var(--color-surface-raised);
+  --color-muted: var(--color-surface);
+  --color-muted-foreground: var(--color-text-secondary);
+  --color-foreground: var(--color-text-primary);
+  --color-line: var(--color-border);
+  --color-line-strong: var(--color-border-strong);
+  --color-ring: var(--color-brand-primary);
+
+  --radius-card: var(--radius-card);
+  --radius-button: var(--radius-button);
+  --shadow-soft: var(--shadow-soft);
+  --shadow-card: var(--shadow-card);
+  --shadow-lift: var(--shadow-lift);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-brand-primary);
+    outline-offset: 2px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+/* Typography hierarchy */
+@utility text-display {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 1.05;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+@utility text-heading {
+  font-size: clamp(1.875rem, 3.5vw, 2.5rem);
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+@utility text-subheading {
+  font-size: 1.25rem;
+  line-height: 1.3;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+@utility text-body-lg {
+  font-size: 1.125rem;
+  line-height: 1.65;
+}
+@utility text-label {
+  font-size: 0.875rem;
+  line-height: 1.25;
+  font-weight: 600;
+}
+@utility text-caption {
+  font-size: 0.75rem;
+  line-height: 1.4;
+  font-weight: 500;
+}
