@@ -241,7 +241,7 @@ These are planned stages, not completed features.
 
 ## Current development status
 
-This repository is at an early stage. It contains the monorepo configuration, shared packages (design tokens plus empty contracts, API client and utilities) and a **scaffold of the web app** with the RoomSync design system and a starter landing page. The backend, database, authentication, mobile app and all product features are **not yet implemented**.
+This repository is at an early stage. It contains the monorepo configuration, shared packages (design tokens plus empty contracts, API client and utilities) and a **scaffold of the web app** with the RoomSync design system and a starter landing page. The Django backend has a foundation (settings, custom user model, health endpoint, OpenAPI docs; see [backend/README.md](backend/README.md)). Authentication flows, product features, Redis/Celery, Docker and the mobile app are **not yet implemented**.
 
 ## Contributing
 
